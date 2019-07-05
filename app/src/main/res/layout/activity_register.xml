@@ -47,22 +47,12 @@
         android:layout_marginTop="5sp">
 
         <EditText
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Enter Full Name"
             android:textColorHint="#C0C0C0"
-            android:textSize="16sp"
-            android:hint="First Name"
-            android:layout_gravity="left"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="#C0C0C0"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:layout_marginLeft="90dp"
-            android:hint="Last Name" />
+            android:textSize="16sp" />
 
 
 
@@ -80,6 +70,7 @@
         />
 
     <EditText
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter email"
@@ -102,6 +93,7 @@
         />
 
     <EditText
+        android:id="@+id/etPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColorHint="#C0C0C0"
@@ -110,6 +102,18 @@
         android:layout_marginRight="20sp"
         android:layout_marginTop="5sp"
         android:hint="Enter Password"
+        />
+
+    <EditText
+        android:id="@+id/etRePass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#C0C0C0"
+        android:textSize="16sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="5sp"
+        android:hint="Confirm Password"
         />
 
     <CheckBox
@@ -123,6 +127,7 @@
         />
 
     <Button
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
@@ -155,6 +160,7 @@
         android:text="Sign up with facebook" />
 
     <TextView
+        android:id="@+id/tvLogin"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
         android:textAlignment="center"
