@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "216904570333",
+    "firebase_url": "https://roomrentalapp.firebaseio.com",
+    "project_id": "roomrentalapp",
+    "storage_bucket": "roomrentalapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216904570333:android:51de3f4b5f000233",
+        "android_client_info": {
+          "package_name": "com.example.roomfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216904570333-t1pa5cemk6f6tqrkq0qk0nfv69dc7h75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnRj--gfp0hw5HXsy-wbbshszW9R4wCLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216904570333-t1pa5cemk6f6tqrkq0qk0nfv69dc7h75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
