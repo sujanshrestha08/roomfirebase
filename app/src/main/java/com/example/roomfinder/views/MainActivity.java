@@ -14,6 +14,7 @@ import com.example.roomfinder.R;
 import com.example.roomfinder.adapter.RoomRecyclerAdapter;
 import com.example.roomfinder.model.Room;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
@@ -58,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, CreateRoomActivity.class);
             startActivity(intent);
             return true;
+        }
+        switch (item.getItemId()){
+            case R.id.menuLogout:
+
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(this, LoginActivity.class));
         }
 
         return super.onOptionsItemSelected(item);

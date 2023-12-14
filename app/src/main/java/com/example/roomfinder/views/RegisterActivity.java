@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.kaopiz.kprogresshud.KProgressHUD;
 
 import java.util.HashMap;
 
@@ -23,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btnRegister;
     private FirebaseAuth auth;
     private TextView tvLogin;
+    private KProgressHUD hud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,13 @@ public class RegisterActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPass = findViewById(R.id.etPass);
         etRePass = findViewById(R.id.etRePass);
+
+        hud = KProgressHUD.create(this)
+                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                .setLabel("Loading...")
+                .setCancellable(false)
+                .setAnimationSpeed(2)
+                .setDimAmount(0.5f);
 
         btnRegister = findViewById(R.id.btnRegister);
 

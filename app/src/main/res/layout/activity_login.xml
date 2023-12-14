@@ -23,6 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:padding="8dp"
         android:text="Login"
         android:textColor="#FFFFFF"
@@ -36,13 +38,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:padding="4dp"
         android:textColorHint="#C0C0C0"
         app:boxStrokeColor="#FFFFFF"
         app:boxStrokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginLbl">
 
@@ -188,12 +191,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="18dp"
         android:backgroundTint="#FFFFFF"
         android:text="Login with Facebook"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvOr"
         app:layout_constraintWidth_max="320dp" />
@@ -201,22 +205,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="76dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginWithFacebook"
+        app:layout_constraintVertical_bias="0.285">
 
-        <TextView
-            android:id="@+id/no_have_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="Don't have account ? "
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/btnRegister"
@@ -224,7 +223,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
-            android:text="REGISTER"
+            android:text="Don't have account ? REGISTER"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 

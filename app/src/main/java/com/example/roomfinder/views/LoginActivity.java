@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.roomfinder.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.kaopiz.kprogresshud.KProgressHUD;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView tvForget;
     private Button btnLogin;
     private TextView btnRegister;
+    private KProgressHUD hud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +44,12 @@ public class LoginActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        btnLogin.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
-        });
-
+        hud = KProgressHUD.create(this)
+                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                .setLabel("Loading...")
+                .setCancellable(false)
+                .setAnimationSpeed(2)
+                .setDimAmount(0.5f);
         btnLogin.setOnClickListener(v -> {
             String txt_email = etEmail.getText().toString();
             String txt_password = etPass.getText().toString();
@@ -54,11 +57,14 @@ public class LoginActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
                 Toast.makeText(LoginActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
             } else {
+                hud.show();
                 login(txt_email, txt_password);
             }
         });
 
         btnRegister.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
+
+        tvForget.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class)));
 
     }
 
@@ -73,8 +79,10 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
 
-                        Toast.makeText(LoginActivity.this, "LoginActivity successful", Toast.LENGTH_SHORT).show();
+                        hud.dismiss();
+                        Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                     } else {
+                        hud.dismiss();
                         Toast.makeText(LoginActivity.this, "Email or Password incorrect", Toast.LENGTH_SHORT).show();
                     }
                 });

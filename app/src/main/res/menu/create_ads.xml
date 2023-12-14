@@ -7,4 +7,10 @@
         android:icon="@android:drawable/ic_input_add"
         android:title="Add Room"
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menuLogout"
+        android:title="Logout"
+        />
+
 </menu>

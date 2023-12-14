@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".views.ForgetPasswordActivity"></activity>
         <activity
             android:name=".views.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -27,25 +27,19 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".views.RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".views.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".views.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".views.CreateRoomActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".views.ProfileActivity" />
-
     </application>
 
 </manifest>
